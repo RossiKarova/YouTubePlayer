@@ -41,7 +41,7 @@ class StandaloneActivity : AppCompatActivity(), View.OnClickListener {
 
         val intent = when (view.id) {
             R.id.btnPlayVideo -> YouTubeStandalonePlayer.createVideoIntent(
-                    this, getString(R.string.GOOGLE_API_KEY), YOUTUBE_VIDEO_ID, 0, true, false)
+                    this, getString(R.string.GOOGLE_API_KEY), YOUTUBE_VIDEO_ID, 0, true, true)
             R.id.btnPlayList -> YouTubeStandalonePlayer.createPlaylistIntent(
                     this, getString(R.string.GOOGLE_API_KEY), YOUTUBE_PLAYLIST, 0, 0, true, true)
             else -> throw IllegalArgumentException("Undefined button clicked")
